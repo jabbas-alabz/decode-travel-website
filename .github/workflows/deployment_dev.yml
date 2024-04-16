@@ -1,0 +1,19 @@
+name: Deploy
+
+on:
+  push:
+    branches: [develop]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2.4.2
+
+      - name: Heroku deploy DEV
+        uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
+          heroku_app_name: "camino-plugin-test" #Must be unique in Heroku
+          heroku_email: "jaffer.abbas@nordivo.com"
