@@ -8,14 +8,14 @@ import CookieBanner from "../components/CookieBanner.astro";
 <html lang="en" class="selection:bg-primary selection:text-gray-950 scroll-smooth">
     <head>
         <BaseHead />
-        <link href="https://dev-plugin.triend.io/static/css/main.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://test-plugin.triend.io/static/css/main.css?v=1.0">
     </head>
     <body class="overflow-x-hidden text-white bg-gray-950">
         <Header />
         <slot />
         <Footer />
         <script>sal();</script>
-        <script type="text/javascript" src="https://dev-plugin.triend.io/static/js/main.js" triendKey="a1b2c3d4e5f" companyUid="a137cb1a-f7dc-42dc-80c9-193a01a24c8b"></script>
+       <script type="text/javascript" src="https://test-plugin.triend.io/static/js/main.js?v=1.0" triendKey="67890" companyUid="a137cb1a-f7dc-42dc-80c9-193a01a24c8b"></script>
     </body>
     <CookieBanner />
 </html>
